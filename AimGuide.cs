@@ -4,27 +4,27 @@ using UnityEngine;
 public class AimGuide : MonoBehaviour
 {
     [Tooltip("Max guide legnth.")]
-    public float maxGuideLength = 16f;
+    [SerializeField] private float maxGuideLength = 16f;
 
     [Tooltip("Min space between guide points (Must be non zero).")]
-    public float minGuidePointDist = 2f;
+    [SerializeField] private float minGuidePointDist = 2f;
 
     [Tooltip("Max number of guide points (Must be non zero).")]
-    public int maxGuidePointCount = 3;
+    [SerializeField] private int maxGuidePointCount = 3;
 
     [Tooltip("Automatically calculates max guide point count.")]
-    public bool autoCalcMaxGuides = false;
+    [SerializeField] private bool autoCalcMaxGuides = false;
 
     [Range(0, 1f)]
     [Tooltip("Set to 1 if you want a (1 to 1) correspondence with mouse input.")]
-    public float inputSensitivity = 0.75f; //how much the drag from mouse matches the guides visual drag
+    [SerializeField] private float inputSensitivity = 0.75f; //how much the drag from mouse matches the guides visual drag
 
     [Range(0, 1f)]
     [Tooltip("Set to 1 if you (Don't) want a stretching effect, Set to 0 if you want it always to be stretching.")]
-    public float stretchEffectStartPoint = 0.5f; //When to start streatching behaviour as a fraction of guideLength.
+    [SerializeField] private float stretchEffectStartPoint = 0.5f; //When to start streatching behaviour as a fraction of guideLength.
 
-    public GuideMode mode;
-    public GameObject guidePrefab;
+    [SerializeField] private GuideMode mode;
+    [SerializeField] private GameObject guidePrefab;
 
     List<SpriteRenderer> guideSprites = new List<SpriteRenderer>();
     PlayerMovement playerMovement; //Instance to player.
@@ -92,7 +92,7 @@ public class AimGuide : MonoBehaviour
         }
     }
 
-    private void ResetGuides()
+    void ResetGuides()
     {
         foreach (var guideSprite in guideSprites)
         {
@@ -100,7 +100,7 @@ public class AimGuide : MonoBehaviour
         } 
     }
 
-    private void Toogle() 
+    void Toogle() 
     {
         toogled = !toogled;
         foreach (var guideSprite in guideSprites)
@@ -109,7 +109,7 @@ public class AimGuide : MonoBehaviour
         }
     }
 
-    private void CalcMaxGuidesCount() 
+    void CalcMaxGuidesCount() 
     {
         if (autoCalcMaxGuides) maxGuidePointCount = Mathf.FloorToInt(maxGuideLength / minGuidePointDist);
     }
