@@ -1,13 +1,26 @@
-<h1>Hi, I'm PHxii!</h1> 
-<b>I'm a Unity C# Programmer with at least 2 years of serious experince with the engine</b>
+<h1>Top Down 2D Aim Guide System</h1>
 
-<h2>👨‍💻 Sample Projects:</h2> 
+<h2>Language and Engine Used</h2>
+- <b>Unity v2021.1 (Backward Compatible)</b> <br/>
+- <b>C#</b>
 
-- <b>2D Slingshot type movement and guiding system</b>
-  - [Aim guiding system](https://github.com/PHxii256/ShowcaseRepo/blob/main/AimGuide.cs)
+<h2>Preview:</h2>
 
-<h2>🌱 I’m currently learning</h2>
-- <b>Networking for Gameobjects (Unity's offical soloution to multiplayer)</b>
+<p align="center">
+Guide visulaization based on initial settings: <br/> 
+<img src="https://i.imgur.com/SjANVA3.png" height="50%" width="50%" alt="Setup"/>
+<br />
+<br />
 
-<h2>📫 How to reach me</h2>
-- <b>DM me on discord! (PHxii#9213)</b>
+<h2>Setup:</h2>
+
+<p align="center">
+Create Empty GameObject and add AimGuide.cs and a Sprite Renderer: <br/> 
+<img src="https://imgur.com/cQpoez2.png" height="50%" width="50%" alt="Setup"/>
+<br />
+<br />
+Create the guide prefab this will be the guide dots in between the main one and the player:  <br/>
+<img src="https://imgur.com/IBMsYK3.png" height="50%" width="50%" alt="Setup"/>
+<br />
+<br />
+That's it! <br/>
