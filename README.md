@@ -23,4 +23,4 @@ Create the guide prefab this will be the guide dots in between the main one and 
 <img src="https://imgur.com/IBMsYK3.png" height="50%" width="50%" alt="Setup"/>
 <br />
 <br />
-That's it! <br/>
+That's it! Check the source code file for more info :D<br/>
